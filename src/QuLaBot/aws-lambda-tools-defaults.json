@@ -11,9 +11,9 @@
   "profile":"default",
   "region" : "eu-north-1",
   "configuration" : "Release",
-  "framework" : "netcoreapp2.1",
-  "function-runtime":"dotnetcore2.1",
+  "framework" : "netcoreapp3.1",
+  "function-runtime":"dotnetcore3.1",
   "function-memory-size" : 256,
   "function-timeout" : 30,
-  "function-handler" : "QuLaBot::QuLaBot.Function::FunctionHandler"
+  "function-handler" : "QuLaBot::QuLaBot.Function::Handle"
 }

@@ -1,8 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <AWSProjectType>Lambda</AWSProjectType>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Amazon.Lambda.APIGatewayEvents" Version="2.0.0" />

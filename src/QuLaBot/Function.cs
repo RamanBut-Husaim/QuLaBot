@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Amazon.Lambda.APIGatewayEvents;
 using Amazon.Lambda.Core;
 
@@ -6,20 +7,18 @@ using Amazon.Lambda.Core;
 
 namespace QuLaBot
 {
-    public class Function
+    public sealed class Function
     {
 
         /// <summary>
         /// A simple function that takes a string and does a ToUpper
         /// </summary>
-        /// <param name="input"></param>
-        /// <param name="context"></param>
-        /// <returns></returns>
-        public APIGatewayProxyResponse FunctionHandler(APIGatewayProxyRequest apigProxyEvent)
+        public APIGatewayProxyResponse Handle(APIGatewayProxyRequest apigProxyEvent)
         {
             return new APIGatewayProxyResponse
             {
-                Body = apigProxyEvent.Body,
+                Body = "{ \"something\": 12 }",
+                Headers = new Dictionary<string, string> {{"Content-Type", "application/json"}},
                 StatusCode = 200,
             };
         }
